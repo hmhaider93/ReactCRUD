@@ -57,6 +57,16 @@ export default function MasterForm(props) {
         ></textarea>
       </div>
       <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+
+        {props.updateButton && 
+        <button className="btn btn-primary"
+        onClick={(event)=>{
+            event.preventDefault()
+            props.updateButtonCallback(exerciseEntry)
+        }}
+        >Update</button>
+        }
+
         <button
           type="button"
           className={"btn " + (props.buttonColorRed ? "btn-danger": "btn-primary")}
