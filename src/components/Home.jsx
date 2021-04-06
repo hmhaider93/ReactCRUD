@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <form>
-    <MasterForm handleOnAddButtonClicked={onAddButtonClicked}/>
+    <MasterForm handleOnAddButtonClicked={onAddButtonClicked} buttonText="Add"/>
     </form>
   );
 }

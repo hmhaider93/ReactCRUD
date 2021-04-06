@@ -12,6 +12,10 @@ export default function MasterForm(props) {
       props.handleOnAddButtonClicked(exerciseEntry);
     }
 
+    if (props.handleOnDeleteButtonClicked){
+        props.handleOnDeleteButtonClicked(exerciseEntry);
+    }
+
     setExerciseEntry({
       title: "",
       description:"",
@@ -55,10 +59,10 @@ export default function MasterForm(props) {
       <div className="d-grid gap-2 d-md-flex justify-content-md-end">
         <button
           type="button"
-          className="btn btn-primary"
+          className={"btn " + (props.buttonColorRed ? "btn-danger": "btn-primary")}
           onClick={handleOnButtonClick}
         >
-          Primary
+          {props.buttonText}
         </button>
       </div>
     </div>
