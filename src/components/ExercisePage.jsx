@@ -31,8 +31,9 @@ export default function ExercisePage() {
       .get("http://localhost:5000/routes/")
       .then((response) => {
         setExerciseEntries(() => {
+            console.log(response);
           return response.data.map((val) => {
-            return { id: val._id, content: val.post };
+            return { id: val._id, content: val.post, title:val.title };
           });
         });
       })
@@ -51,6 +52,7 @@ export default function ExercisePage() {
                 <MasterForm
                   key={value.id}
                   content={value.content}
+                  title = {value.title}
                   id={value.id}
                   buttonText="Delete"
                   buttonColorRed="true"
