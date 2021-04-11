@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+    react-app:
+        image: hmhaider/reactapp:1.0
+        stdin_open: true
+        ports:
+            - "3000:3000"
+        networks:
+            - "mern-app"
+        volumes:
+            - '.:/app'
+            - '/app/node_modules'
+        environment:
+            - CHOKIDAR_USEPOLLING=true
+
+networks:
+    mern-app:
+        driver: bridge

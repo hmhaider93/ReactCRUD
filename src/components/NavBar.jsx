@@ -5,7 +5,7 @@ export default function NavBar() {
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Full Stack CRUD App Challenge
+          Full Stack CRUD App Challenge on Docker container does it still work?
         </a>
         <button
           className="navbar-toggler"
