@@ -38,9 +38,9 @@ export default function MasterForm(props) {
       <div className="mb-3">
         <label className="form-label ">Instruction Title:</label>
         <input
-          type="email"
+          type="text"
           className="form-control"
-          placeholder="name@example.com"
+          placeholder="Your Title goes here"
           name="title"
           onChange={handleOnChange}
           value={exerciseEntry.title}
